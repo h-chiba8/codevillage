@@ -1,0 +1,405 @@
+/* 全体のスタイル（CSSリセット用） */
+* {
+    /* padding,borderが要素の中に入る */
+    box-sizing: border-box;
+}
+
+ul {
+    /* リストの・を消す */
+    list-style: none;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+button {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+a {
+    color: inherit;
+    /* 文字の下の線を消す */
+    text-decoration: none;
+}
+
+body {
+    color: #555;
+    margin: 0;
+    line-height: 1.6;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: #fff;
+    background-color: inherit;
+    position: absolute;
+    z-index: 10;
+}
+
+.header-nav ul {
+    display: flex;
+    padding: 22px 0;
+}
+
+.header-logo {
+    padding: 20px 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.header-nav li {
+    margin-left: 55px;
+    font-size: 15px;
+}
+
+footer {
+    height: 50px;
+    background-color: #191919;
+}
+
+footer p {
+    color: #FFFFFF;
+    font-size: 12px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+/* first-viewのスタイル */
+#first-view {
+    height: 770px;
+    /* 背景画像を挿入 */
+    background-image: url("/img/bg1.png");
+    /* 画面全体に画像が表示されるように */
+    background-size: cover;
+    position: relative;
+    color: #FFF;
+}
+
+.first-v-wrap {
+    padding: 285px 0 255px;
+    /* ブロック要素を中央揃え */
+    margin: 0 auto;
+    width: 250px;
+    text-align: center;
+}
+
+/* first-viewのスタイル */
+.first-v-title {
+    margin-bottom: 150px;
+    /* 文字を太文字に */
+    font-weight: bold;
+    font-size: 27px;
+}
+
+.fa-door-open {
+    padding-right: 4px;
+}
+
+.first-v-title::after {
+    display: block;
+    content: "";
+    width: 100px;
+    margin: 20px auto 0;
+    /* 線を作る */
+    border-top: 1px solid #FFF;
+}
+
+/*共通パート*/
+.first-v-btn {
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    /* 枠線を消す */
+    border: none;
+    /* 要素の枠を丸くする */
+    border-radius: 5px;
+    /* -90degで左から右にグラデーションする */
+    background: linear-gradient(-90deg, #283C86, #06BEB6);
+    /* 要素に影をつける */
+    box-shadow: 0px 5px #070707;
+    font-weight: bold;
+    font-size: 15px;
+    color: #FFF;
+}
+
+/* aboutセクション */
+.inner {
+    width: 1100px;
+    padding: 90px 0;
+    margin: 0 auto;
+}
+
+/* 共通ぱーと */
+.title {
+    /* 擬似要素とtitleを横並びに */
+    display: flex;
+    padding-bottom: 60px;
+    /* 要素全体を横方向に中央揃え */
+    justify-content: center;
+    /* 線を文字の縦方向に中央揃え */
+    align-items: center;
+    font-style: italic;
+    font-size: 18px;
+    text-align: center;
+}
+
+.title-b {
+    /* Aboutの部分だけを太文字に */
+    font-weight: bold;
+}
+
+.title::before {
+    /* 擬似要素には必ずつける */
+    content: "";
+    display: inline-block;
+    width: 30px;
+    margin-right: 20px;
+    border-top: 1px solid #191919;
+}
+
+.title::after {
+    /* 擬似要素には必ずつける */
+    content: "";
+    display: inline-block;
+    width: 30px;
+    margin-left: 20px;
+    border-top: 1px solid #191919;
+    content: "";
+}
+
+.about-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+#about {
+    color: #191919;
+    background-color: #f8f8f8;
+}
+
+.about-item {
+    width: 300px;
+    height: 315px;
+    padding: 35px 50px 50px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #FFF;
+}
+
+.about-item:nth-child(n+4):nth-child(-n+6) {
+    /* 4~6個目のabout-itemにmarginをつける */
+    margin-top: 47px;
+}
+
+.about-title__title {
+    font-size: 22px;
+}
+
+.about-item__img img {
+    width: 122px;
+    height: 122px;
+    margin: 20px 0 25px;
+}
+
+.about-item__desc {
+    font-size: 13px;
+}
+
+/* ニュースセクション */
+#news {
+    background-image: url(/img/bg2.png);
+}
+
+.white-title {
+    color: #FFF;
+}
+
+.white-title::before {
+    /* 擬似要素には必ずつける */
+    content: "";
+    display: inline-block;
+    width: 30px;
+    margin-right: 20px;
+    border-top: 1px solid #FFF;
+}
+
+.white-title::after {
+    /* 擬似要素には必ずつける */
+    content: "";
+    display: inline-block;
+    width: 30px;
+    margin-left: 20px;
+    border-top: 1px solid #FFF;
+    content: "";
+}
+
+.white-title {
+    /* 擬似要素とtitleを横並びに */
+    display: flex;
+    padding-bottom: 60px;
+    /* 要素全体を横方向に中央揃え */
+    justify-content: center;
+    /* 線を文字の縦方向に中央揃え */
+    align-items: center;
+    font-style: italic;
+    font-size: 18px;
+    text-align: center;
+}
+
+.news-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news-item {
+    width: 336px;
+    height: 400px;
+    background-color: #FFF;
+}
+
+.news-item:nth-child(2) {
+    margin: 0 46px;
+}
+
+.news-item img {
+    width: 100%;
+    height: 207px;
+}
+
+.date {
+    font-size: 10px;
+    font-weight: bold;
+    color: #191919;
+
+}
+
+.news-item h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 8px 0 20px 0;
+}
+
+.news-item p {
+    font-size: 12px;
+    color: #191919;
+}
+
+.news-content {
+    padding: 20px;
+}
+
+/* エントリーセクション */
+#entry {
+    position: relative;
+    height: 477px;
+}
+
+.entry-wrap {
+    padding: 175px 0 175px;
+    /* ブロック要素を中央揃え */
+    margin: 0 auto;
+    width: 250px;
+    text-align: center;
+}
+
+.entry-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 55px;
+}
+
+/* コンタクト */
+#contact {
+    background-image: URL("/img/bg3.png");
+    background-size: cover;
+    color: #fff;
+}
+
+#contact .title::before,
+#contact .title::after {
+    border-color: #fff;
+}
+
+.contact-wrap {
+    width: 600px;
+    margin: 0 auto;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    border-radius: 7px;
+    padding: 15px;
+}
+
+input,
+select {
+    height: 55px;
+}
+
+textarea {
+    height: 185px;
+}
+
+select {
+    appearance: none;
+}
+
+.contact-box:nth-of-type(3) {
+    position: relative;
+}
+
+.contact-box:nth-of-type(3)::after {
+    position: absolute;
+    background-image: URL("/img/arrow.png");
+    background-size: 100%;
+    display: block;
+    content: "";
+    width: 15px;
+    height: 15px;
+    top: 60%;
+    right: 20px;
+}
+
+.contact-caution {
+    margin: 60px 0 25px;
+    font-size: 15px;
+}
+
+.contact-box {
+    margin-bottom: 33px;
+}
+
+.contact-box:nth-of-type(4) {
+    margin-bottom: 0px;
+}
+
+.contact-text {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.red {
+    color: red;
+    margin-left: 8px;
+}
+
+.caution-red {
+    margin-left: 0;
+    margin-right: 8px;
+}
